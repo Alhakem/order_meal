@@ -1,0 +1,15 @@
+{% extends 'order_list/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="add_form" >
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-primary">أضافة وجبة جديد </button>
+        </form>
+
+    </div>
+    
+</div>
+{% endblock content %}

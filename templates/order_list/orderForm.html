@@ -1,0 +1,36 @@
+{% extends 'order_list/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<section class="order_form">
+<div class="container">
+ 
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{meal_data.image}}" class="card-img" alt="...">
+                </div>
+                   
+                  <div class="card-body">
+                      <h5 class="card-title"> اسم الوجبة :{{meal_data.name_meal}}</h5>
+                      <p class="card-text"> السعر :  {{meal_data.price}} $</p>
+                      <p class="card-text"><small class="text-muted">{{orders.order_date}}</small></p>
+                  </div>
+            </div>
+                
+        </div>
+    <div class="form" > 
+        <div class="form-group col-md-6">
+        <form method="post">
+            {% csrf_token %}
+            <p>اطلب هنا </p>
+            {{form|crispy}}
+            <button type="submit" class="btn btn-primary">أطلب الان </button>
+        </form>
+    </div>
+</div>
+</div>
+ 
+</section>
+{% endblock content %}
+

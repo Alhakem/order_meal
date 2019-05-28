@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.ttf')  format("truetype"),
+         local('Tajawal');
+  }
+ 
+body{
+    background:#ffede7;
+    
+  }
+  .carousel{
+    width: 600px;
+    height: 400px;
+    margin:  0 auto;
+  }
+
+
+
+  html {
+    font-size: 62.5%; 
+    font-family: 'Tajawal';
+  }
+  /** start index list page **/
+  
+.text-meal{
+      font-size: 20px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 20px;
+       
+      
+  }
+ 
+  button > a {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  color: #fff;}
+
+.text-h1{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+  }
+.meal_list .card{
+    margin: 20px auto;
+    width: 200px;
+  }
+ .meal_list .card-title{
+      margin-top: 10px;
+      margin-bottom: 30px;
+  }
+.meal_list .card-body .f-l{
+    float: right;
+    border: 0;
+    padding: 7px;
+     
+  }
+  
+.card-body .f-2{
+    float: left;
+    padding: 7px;
+    
+      }
+ 
+ a {
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+        text-decoration: none;
+ }          
+ 
+ /** end index list page **/
+
+  /** start details  page **/
+ .meal_list_order .card{
+ width: 500px;
+ margin: 20px auto;
+ }
+ /** end details  page **/
+ /** start add form meal  page **/
+ .add_form{
+     background:#dde1e4;
+    margin: 50px auto;
+    width: 500px;
+    padding: 50px;
+ }
+ .h1-color{
+     color: #fff;
+ }
+ .col-form-label {
+     color: #fff;
+     font-size: 15px;
+     margin-bottom: 20px;
+ }
+  /** end add form meal  page **/
+  
+
+
+/** start Order list page **/
+.order_form .card{
+  margin: 90px  auto;
+ 
+}
+.form-group {
+  
+  margin: 50px auto;
+  background:#c6d5e0;
+}
+ /** end Order list page **/
+
+ 
+ .order-list{
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

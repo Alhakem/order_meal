@@ -1,0 +1,45 @@
+{% extends 'order_list/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="meal_list">
+        <div class=" container">
+          <p class="text-meal text-center ">أطلب وأستمتع بجميع وجباتنا الذيذه  </p>
+       
+          <h1 class="text-h1 text-center"> الوجبات </h1>
+            <div class="row">
+                {% for meals in posts_meal %}
+                <div class="col-md-4">
+                        
+                    <div class="card" style="width: 18rem;">
+                            {% if meals.image %}
+                            <img src="{{meals.image}}" style="width: 100%; height: 200px; "/>
+                            {% endif %}
+                        <div class="card-body">
+                          <h5 class="card-title  text-center">{{ meals.name_meal }}</h5>
+
+                          <div class="f-l btn btn-danger">
+                           <h5><a  href="{% url 'details' meals.id %}">المزيد</a></h5>
+                           <h5><a  href="{% url 'details' meals.id %}">تعديل</a></h5>
+                          </div>
+                          
+                          <div class="f-2 ">
+                              <h5 >{{ meals.price }}$</h5>
+                             
+                          </div>
+  
+                        </div>
+                    </div>
+                   
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+      </div>
+      </section>
+
+{% endblock  %}

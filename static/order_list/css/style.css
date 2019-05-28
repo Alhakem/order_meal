@@ -6,18 +6,25 @@
  
 body{
     background:#ffede7;
-    
   }
-  .carousel{
-    width: 600px;
-    height: 400px;
-    margin:  0 auto;
+  
+  .carousel-inner,
+  .carousel-item{
+    height: 500px;
+    background: #000;
   }
 
+  .carousel-item img{
+    opacity: .7;
+    filter: opacity(70);
+    height: 100%;
+    object-fit: cover;
+  }
 
+  nav {direction: rtl;}
 
   html {
-    font-size: 62.5%; 
+    /* font-size: 62.5%;  */
     font-family: 'Tajawal';
   }
   /** start index list page **/
@@ -111,10 +118,9 @@ body{
  /** end Order list page **/
 
  
- .order-list{
-   
+ a:hover{
+   color: #fff;
  }
-
 
 
 

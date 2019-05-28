@@ -7,13 +7,13 @@
 
 <section class="meal_list">
         <div class=" container">
-          <p class="text-meal text-center ">أطلب وأستمتع بجميع وجباتنا الذيذه  </p>
+          <h2 class="text-meal text-center ">أطلب وأستمتع بجميع وجباتنا الذيذه  </h2>
           
           <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-secondary"> <a href="{% url 'add_meals'  %}"> أضف وجب جديدة </a></button>
               <button type="button" class="btn btn-secondary"><a  href="{% url 'list_order' %}"> جميع الطلبات </a></button>
-            
             </div>
+
           <h1 class="text-h1 text-center"> الوجبات </h1>
             <div class="row">
                 {% for meals in posts_meal %}

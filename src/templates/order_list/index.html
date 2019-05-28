@@ -2,15 +2,49 @@
 {% load static %}
 
 {% block content %}
-<h1>welcome</h1>
-<a class="text-dark" href="{% url 'add_meals' %}"> أضف وجب جديدة </a>
-{% for meals in posts_meal %}
-<div class=" border p-3 mb-30">
-        <img src="{{meals.image.url}}" style="width: 200px; "/>
-    <span class="text-secondary"><h3><a class="text-dark"
-         href="{% url 'details' meals.id %}">{{ meals.name_meal }}</a> </h3>
-    <p>{{ meals.content }}</p>
-</div>
 
-{% endfor %}
-{% endblock content %}
+
+
+<section class="meal_list">
+        <div class=" container">
+          <p class="text-meal text-center ">أطلب وأستمتع بجميع وجباتنا الذيذه  </p>
+          
+          <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary"> <a href="{% url 'add_meals'  %}"> أضف وجب جديدة </a></button>
+              <button type="button" class="btn btn-secondary"><a  href="{% url 'list_order' %}"> جميع الطلبات </a></button>
+            
+            </div>
+          <h1 class="text-h1 text-center"> الوجبات </h1>
+            <div class="row">
+                {% for meals in posts_meal %}
+                <div class="col-md-4">
+                        
+                    <div class="card" style="width: 18rem;">
+                            {% if meals.image %}
+                            <img src="{{meals.image}}" style="width: 100%; height: 200px; "/>
+                            {% endif %}
+                        <div class="card-body">
+                          <h5 class="card-title  text-center">{{ meals.name_meal }}</h5>
+                          
+                          
+                          <div class="f-l btn btn-danger">
+                           <h5><a  href="{% url 'details' meals.id %}">المزيد</a></h5>
+                          </div>
+                          
+                          <div class="f-2 ">
+                              <h5 >{{ meals.price }}$</h5>
+                             
+                          </div>
+  
+                        </div>
+                    </div>
+                   
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+      </div>
+      </section>
+
+{% endblock  %}
